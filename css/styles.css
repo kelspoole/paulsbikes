@@ -249,4 +249,53 @@
   .booking-form .btn-primary:hover {
     background-color: #8f1919;
   }
+
+  .red-heading {
+    color: #a61c1c;
+  }  
   
+  /* Hidden by default */
+.thank-you-box {
+  display: none;
+  background-color: #a61c1c; /* Red theme */
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  color: #fff;
+  text-align: center;
+  animation: zoomIn 0.4s ease-in-out;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Show it when form is submitted */
+.thank-you-box.show {
+  display: block;
+}
+
+.bike-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: ride 1.2s ease-in-out infinite alternate;
+}
+
+/* Animation for the box */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation for the bike emoji */
+@keyframes ride {
+  0% {
+    transform: translateX(-5px) rotate(-3deg);
+  }
+  100% {
+    transform: translateX(5px) rotate(3deg);
+  }
+}

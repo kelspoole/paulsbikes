@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (response.ok) {
             form.reset();
             form.style.display = "none";
-            thankYou.style.display = "block";
+            thankYou.classList.add("show");          
           } else {
             alert("Oops! Something went wrong.");
           }
