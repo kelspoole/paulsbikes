@@ -7,20 +7,27 @@
   <link rel="stylesheet" href="css/styles.css?v=1.1" />
   <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
 </head>
-    <header>    
-        <div class="container header-flex">
-          <h1>Paul's Motorbikes & More</h1>
-          <nav>
-            <ul>
-              <li><a href="index.html" class="btn">Home</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>        
 <body class="dark-bg">
+
+  <!-- ✅ HEADER -->
+  <header>
+    <div class="container header-flex">
+      <h1>Paul's Motorbikes & More</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="btn">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="container">
     <h2>Contact Us / Book Your Bike In</h2>
-    <form id="booking-form" class="booking-form">
+
+    <!-- ✅ FORM WITH FORM ACTION -->
+    <form action="https://formspree.io/f/mdkgnzdk" method="POST" class="booking-form" id="booking-form">
+      <input type="hidden" name="_subject" value="New Booking Enquiry from Website" />
+
       <label for="name">Your Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -54,18 +61,16 @@
 
       <button type="submit" class="btn-primary">Submit</button>
     </form>
+
+    <!-- ✅ THANK YOU MESSAGE -->
+    <div id="thank-you" style="display:none; margin-top: 2rem; color: #d62828;">
+      <h3>Thank you!</h3>
+      <p>Your enquiry has been sent. We'll get back to you shortly.</p>
+    </div>
   </div>
 
-  <script>
-    // Show/hide Job Type
-    document.getElementById('enquiry').addEventListener('change', function () {
-      const jobTypeWrapper = document.getElementById('job-type-wrapper');
-      if (this.value === 'booking' || this.value === 'pricing') {
-        jobTypeWrapper.style.display = 'block';
-      } else {
-        jobTypeWrapper.style.display = 'none';
-      }
-    });
-  </script>
+  <!-- ✅ Load external script -->
+  <script src="js/script.js"></script>
+
 </body>
 </html>
